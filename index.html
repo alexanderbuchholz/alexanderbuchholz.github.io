@@ -6,12 +6,64 @@
   gtag('js', new Date());
 
   gtag('config', 'UA-113692533-1');
+
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
 </script>
 
 
 <style type="text/css">
 <!--
 .tab { margin-left: 20px; }
+
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
 -->
 </style>
 
@@ -32,13 +84,13 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1>Alexander Buchholz</h1>
+        <h1>Alexander Buchholz, PhD</h1>
           <img src="images/IMGP5494_small.jpg" class="pull-left" style="margin:20px
           20px 20px 0; height:210px; width:210px; border-radius:100%"/>
           <br>
-          Statistics Ph.D. Student 
+          Postdoctoral Research Associate 
           <br>
-          ENSAE Paris | CREST | University Paris Saclay
+          Biostatistics Unit | Medical Research Council | University of Cambridge
           <br>
           <br>
         <hr>
@@ -72,7 +124,7 @@
               <img class="fa fa-twitter fa-lg" src = "images/wordpress.png" style="height:32px; width:32px">
           </a>
 
-          <a href="mailto:alexander.buchholz@ensae.fr" class="icon">
+          <a href="mailto:alexander.buchholz@mrc-bsu.cam.ac.uk" class="icon">
               <img class="fa fa-twitter fa-lg" src = "images/mail.png" style="height:32px; width:32px">
           </a>
           <br>
@@ -83,16 +135,16 @@
         <h2>
 <a id="about-me" class="anchor" href="#about-me" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>About me</h2>
 
-<p>I'm a PhD Student in Statistics at the <a target="_blank" href="http://crest.science/">Center for research in economics and statistics (CREST), Paris</a> and currently in the last year of my studies. 
-My supervisor is <a target="_blank" href="https://sites.google.com/site/nicolaschopinstatistician/">Nicolas Chopin</a>. 
+<p>I'm a Postdoctoral Research Associate in the <a target="_blank" href="https://www.mrc-bsu.cam.ac.uk/">Biostatistics Unit of the Medical Research Council at the University of Cambridge</a>, working with 
+<a target="_blank" href="https://www.mrc-bsu.cam.ac.uk/people/in-alphabetical-order/n-to-s/sylvia-richardson/">Sylvia Richardson</a>. I completed a PhD in applied mathematics at the <a target="_blank" href="http://crest.science/">Center for research in economics and statistics (CREST), Paris</a> supervised by <a target="_blank" href="https://sites.google.com/site/nicolaschopinstatistician/">Nicolas Chopin</a>. 
+The topic was on high dimensional Bayesian computation, with a focus on improving Monte Carlo simulations for models with numerous parameters to be inferred. 
 From October 2017 to April 2018 I visited <a target="_blank" href="https://sites.google.com/site/pierrejacob/">Pierre E. Jacob</a> at the <a target="_blank" href="https://statistics.fas.harvard.edu/">Department of Statistics at Harvard University</a>.
-After graduate studies in economics, mathematics and statistics under the double degree program of 
-<a target="_blank" href="https://www.wiwi.hu-berlin.de/de/international/deutsch-franzosischer-doppelstudiengang">Humboldt University Berlin and ENSAE ParisTech</a>, 
-I am currently writing a PhD thesis in applied mathematics at the University Paris Saclay. 
-The topic is on high dimensional Bayesian computation, with a focus on improving Monte Carlo simulations for models with numerous parameters to be inferred. My research has applications in statistics and machine learning.
+I did my graduate studies in economics, mathematics and statistics under the double degree program of 
+<a target="_blank" href="https://www.wiwi.hu-berlin.de/de/international/deutsch-franzosischer-doppelstudiengang">Humboldt University Berlin and ENSAE ParisTech</a>. 
+My research has applications in statistics and machine learning.
 <a href="#publications">Below</a> you can find a list of past and current projects.</p>
 
-<p>My research interest lies in Monte Carlo methods and approximate inference in general and in particular Hamiltonian Monte Carlo, sequential Monte Carlo, quasi Monte Carlo, approximate Bayesian computation and variational inference.</p>
+<p>My research interest lies in Monte Carlo methods and approximate inference in general and in particular Hamiltonian Monte Carlo, sequential Monte Carlo, quasi Monte Carlo, approximate Bayesian computation and variational inference. As a postdoc I am interested in computational methods for Bayesian inference in genomics. </p>
 
 <h2>
 <a id="teaching" class="anchor" href="#teaching" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Teaching</h2>
@@ -148,12 +200,15 @@ Monte Carlo</a>
 <a id="publications" class="anchor" href="#publications" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Publications</h2>
 
 <p><em>2018</em></p>
+<ul>
+<li>Buchholz A, (2018). Thesis: <a target="_blank" href="https://pastel.archives-ouvertes.fr/tel-01961050/document"> High dimensional Bayesian Computation</a>. University Paris Saclay. </li></ul>
+
 
 <ul>
 <li>Buchholz* A, Wenzel* F, Mandt S, (2018). <a target="_blank" href="https://amor.cms.hu-berlin.de/~wenzelfl/files/qmcvi_ICML.pdf">Quasi-Monte Carlo Variational Inference</a>. ICML 2018. *(equal contributions)</li></ul>
 
 <ul>
-<li>Buchholz A, Chopin N (2018). Preprint on arXiv: <a target="_blank" href="https://arxiv.org/abs/1710.01057">Improving approximate Bayesian computation via quasi Monte Carlo</a>. Journal of Computational and Graphical Statistics (to appear). </li></ul>
+<li>Buchholz A, Chopin N (2018). Preprint on arXiv: <a target="_blank" href="https://arxiv.org/abs/1710.01057">Improving approximate Bayesian computation via quasi Monte Carlo</a>. Journal of Computational and Graphical Statistics. </li></ul>
 
 
 <h2>
